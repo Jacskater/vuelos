@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletos vuelo</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <form id="formulario">
+        <label>Origen:</label>
+        <div id="ori" class="origen">SLA-Salta</div>
+  
+        <label>Destino:</label>
+
+        <select id="desti" name="destino">
+        <option value="SLA-COR">COR-Cordoba</option>
+        <option value="SLA-BUE">BUE-Buenos Aires</option>
+        <option value="SLA-MDZ">MDZ-Mendoza</option>
+        </select>
+
+
+        <div id="espa" class="espacio"></div>
+        
+        <label>IDA:</label>
+        <input type="checkbox" id="ida" required>
+
+        <label>IDA/VUELTA:</label>
+        <input type="checkbox" id="idaVuelta" required>
+        
+        <label>Fecha IDA:</label>
+        <input type="date" id="fechaIda" required>
+
+        <label>Fecha Vuelta:</label>
+        <input type="date" id="fechaVuelta" required>
+        
+        <label>Pasajero:</label>
+        <input type="number" id="pasajero" required>
+        
+        <button type="button" onclick="validarFormulario()">Validar Datos</button>
+        <button type="button" onclick="simularCosto()">Simular Costo Boleto/s</button>
+
+        <div id="errores" class="error"></div>
+        
+        <label>Precio:</label>
+        <div id="precios" class="precios"></div>
+        
+    </form>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
